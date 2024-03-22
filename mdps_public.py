@@ -13,6 +13,17 @@ def load_models():
     
     return diabetes_model, heart_disease_model, parkinsons_model
 
+def set_background_image(image_path):
+        page_bg_img = '''
+        <style>
+        body {
+        background-image: url("''' + image_path + '''");
+        background-size: cover;
+        }
+        </style>
+        '''
+        st.markdown(page_bg_img, unsafe_allow_html=True)
+    
 # Load models
 diabetes_model, heart_disease_model, parkinsons_model = load_models()
 
@@ -41,16 +52,7 @@ with st.sidebar:
 
     
 if selected == 'Instructions':
-    def set_background_image(image_path):
-        page_bg_img = '''
-        <style>
-        body {
-        background-image: url("''' + image_path + '''");
-        background-size: cover;
-        }
-        </style>
-        '''
-        st.markdown(page_bg_img, unsafe_allow_html=True)
+    
 
     # Set the background image for the instructions page
     set_background_image("heart.jpg")
