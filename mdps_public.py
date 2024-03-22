@@ -41,6 +41,20 @@ with st.sidebar:
 
     
 if selected == 'Instructions':
+    def set_background_image(image_path):
+        page_bg_img = '''
+        <style>
+        body {
+        background-image: url("''' + image_path + '''");
+        background-size: cover;
+        }
+        </style>
+        '''
+        st.markdown(page_bg_img, unsafe_allow_html=True)
+
+    # Set the background image for the instructions page
+    set_background_image("heart.jpg")
+
     st.title('Instructions')
     st.write("Welcome to the Multiple Disease Prediction System! This website allows you to predict three different diseases: Diabetes, Heart Disease, and Parkinson's Disease. To get started, please select one of the prediction options from the sidebar.")
     
