@@ -291,10 +291,7 @@ if (selected == 'Heart Disease Prediction'):
 
     with col2:
         gender = st.selectbox('Gender', ['Male', 'Female'])
-        if gender == 'Male':
-            sex = st.text_input('sex', value='0')
-        else:
-            sex = st.text_input('sex', value='1')
+        
     
         
     with col3:
@@ -331,7 +328,10 @@ if (selected == 'Heart Disease Prediction'):
         thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
     
     with col2:
-        sex = st.text_input('Sex')
+        if gender == 'Male':
+            sex = st.text_input('sex', value='0')
+        else:
+            sex = st.text_input('sex', value='1')
         
         
      
