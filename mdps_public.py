@@ -329,9 +329,9 @@ if (selected == 'Heart Disease Prediction'):
     
     with col2:
         if gender == 'Male':
-            sex = st.text_input('sex', value='0')
-        else:
             sex = st.text_input('sex', value='1')
+        else:
+            sex = st.text_input('sex', value='0')
         
         
      
