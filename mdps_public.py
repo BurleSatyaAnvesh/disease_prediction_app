@@ -294,12 +294,9 @@ if (selected == 'Heart Disease Prediction'):
 
     with col2:
         if gender == 'Male':
-            sex = ('sex', value='1')
+            sex = st.text_input('sex', value='0')
         else:
-            sex = ('sex', value='0')
-
-   # with col2:
-        #sex = st.text_input('Sex')
+            sex = st.text_input('sex', value='1')
         
     with col3:
         cp = st.text_input('Chest Pain types')
@@ -333,6 +330,9 @@ if (selected == 'Heart Disease Prediction'):
         
     with col1:
         thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
+    
+    with col2:
+        sex = st.text_input('Sex')
         
         
      
