@@ -137,10 +137,10 @@ if (selected == 'Diabetes Prediction'):
     with col3:
         BMI = st.text_input('BMI value')
     
-    with col1:
+    with col2:
         DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
     
-    with col2:
+    with col3:
         Age = st.text_input('Age of the Person')
 
     
