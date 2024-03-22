@@ -291,7 +291,10 @@ if (selected == 'Heart Disease Prediction'):
 
     with col2:
         gender = st.selectbox('Gender', ['Male', 'Female'])
-
+        if gender == 'Male':
+            sex = st.text_input('sex', value='0')
+        else:
+            sex = st.text_input('sex', value='1')
     
         
     with col3:
